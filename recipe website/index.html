@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil's Recipes - Home</title>
+    <meta name="description"
+        content="Discover delicious recipes from around the world. From breakfast to dessert, find your next favorite dish.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Kamil's Recipes.</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="recipes.html?filter=favorites" class="favorites-link">
+                    <i class="fas fa-heart"></i> Favorites
+                    <span class="favorites-badge">0</span>
+                </a>
+                <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay"></div>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Master the Art of Cooking</h1>
+            <p>Discover delicious recipes from around the world.</p>
+            <a href="recipes.html" class="btn">Explore Recipes</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Featured Recipes</h2>
+        <div id="featured-recipes" class="recipe-grid">
+            <!-- Recipes injected by JS -->
+        </div>
+        <div class="text-center mb-4">
+            <a href="recipes.html" class="btn">View All Recipes</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Kamil's Recipes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

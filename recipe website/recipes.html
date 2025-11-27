@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil's Recipes - All Recipes</title>
+    <meta name="description"
+        content="Browse our complete collection of recipes. Filter by category, difficulty, and cooking time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Kamil's Recipes.</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="recipes.html?filter=favorites" class="favorites-link">
+                    <i class="fas fa-heart"></i> Favorites
+                    <span class="favorites-badge">0</span>
+                </a>
+                <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay"></div>
+
+    <main class="container">
+        <h1 class="section-title">Our Recipes</h1>
+
+        <div class="filters">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by name or ingredient..."
+                    aria-label="Search recipes">
+            </div>
+
+            <div class="filter-controls">
+                <div class="category-buttons">
+                    <button class="filter-btn active" data-category="All">All</button>
+                    <button class="filter-btn" data-category="Breakfast">Breakfast</button>
+                    <button class="filter-btn" data-category="Lunch">Lunch</button>
+                    <button class="filter-btn" data-category="Dinner">Dinner</button>
+                    <button class="filter-btn" data-category="Dessert">Dessert</button>
+                </div>
+
+                <div class="advanced-filters">
+                    <div class="filter-group">
+                        <label>Difficulty:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="difficulty-filter" value="Easy"> Easy</label>
+                            <label><input type="checkbox" class="difficulty-filter" value="Medium"> Medium</label>
+                            <label><input type="checkbox" class="difficulty-filter" value="Hard"> Hard</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Cooking Time:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" class="time-filter" name="time" value="all" checked> All</label>
+                            <label><input type="radio" class="time-filter" name="time" value="quick"> Quick
+                                (&lt;20min)</label>
+                            <label><input type="radio" class="time-filter" name="time" value="medium"> Medium
+                                (20-40min)</label>
+                            <label><input type="radio" class="time-filter" name="time" value="long"> Long
+                                (&gt;40min)</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-select">Sort by:</label>
+                        <select id="sort-select">
+                            <option value="default">Default</option>
+                            <option value="title-asc">Name (A-Z)</option>
+                            <option value="title-desc">Name (Z-A)</option>
+                            <option value="time-asc">Time (Low to High)</option>
+                            <option value="time-desc">Time (High to Low)</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="clear-filters" class="btn-secondary">Clear All Filters</button>
+            </div>
+        </div>
+
+        <div id="recipe-container" class="recipe-grid">
+            <!-- Recipes injected by JS -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Kamil's Recipes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
